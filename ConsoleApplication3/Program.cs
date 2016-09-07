@@ -15,12 +15,14 @@ namespace claseTres
             ArrayList lista = new ArrayList(); //Lista no-generic. 
             //Stack juan = new Stack();
             //Queue pepe = new Queue();
-
+            ArrayList
             //Hashtable coco = new Hashtable();
+            
+            lista.Add(new Auto());
+            lista.Add(new Auto());
 
-            lista.Add(new Auto());
-            lista.Add(new Auto());
-          
+            Queue newQ = new Queue();
+            newQ.
             /*Carrera miCarrera;
             miCarrera = new Carrera();
             for (int i = 0; i < 10; i++)

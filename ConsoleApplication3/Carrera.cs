@@ -20,6 +20,9 @@ namespace claseTres
         private static Random rnd;
         public Auto max = new Auto();
         public Auto min = new Auto();
+        public string nombre;
+        public string fecha;
+        public string lugar;
 
         public Carrera()
         {
@@ -34,6 +37,12 @@ namespace claseTres
             #endregion
             this.listaAutos = new List<Auto>(); //Creo una lista tipada de autos.
             rnd = new Random();
+        }
+        public Carrera(string nombre, string lugar, string fecha):this()
+        {
+            this.nombre = nombre;
+            this.lugar = lugar;
+            this.fecha = fecha;
         }
 
         public void volverACero()
@@ -146,7 +155,7 @@ namespace claseTres
         }
 
         //Agrega el auto pasado atraves del metodo Add de system.collection.
-        private bool agregarAuto(Auto autoUno)
+        public bool agregarAuto(Auto autoUno)
         {
             this.listaAutos.Add(autoUno);
 

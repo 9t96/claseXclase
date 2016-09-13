@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace ejercicioCampu_Clase7
 {
     public class Cajon
     {
-        List<Fruta> kjon;
+        public List<Fruta> kjon;
         public int volumen;
 
         private Cajon()
@@ -37,7 +38,10 @@ namespace ejercicioCampu_Clase7
             StringBuilder strBuilder = new StringBuilder();
             strBuilder.Append("Volumen ocupado: " + this.volumen);
             strBuilder.Append("  Capacidad del cajon: " + this.volumen);
-
+            foreach (Fruta fruta in this.kjon)
+            {
+                strBuilder.Append("/n Fruta-->" + "Peso: " + fruta.peso + " Volumen: " + fruta.volumen);
+            }
             return strBuilder.ToString();
         }
 

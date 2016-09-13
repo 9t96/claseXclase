@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 14 for Windows Desktop
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicioUno", "ejercicioUno\ejercicioUno.csproj", "{A7D37E03-C266-47B6-83BF-E120F1D5B5A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicioDos", "ejercicioDos\ejercicioDos.csproj", "{1DCCD87C-DF44-43F6-BD87-5BFF7AB566D0}"
@@ -30,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{016FD560-1310-4123-831E-2DE4B8E8A932}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicioCampu Clase7", "ejercicioCampu Clase7\ejercicioCampu Clase7.csproj", "{7B286AB3-1F9E-4C45-AAE7-A99F8ABD0B3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trestres.ui", "trestres.ui\trestres.ui.csproj", "{CD35D67F-DAD8-4F04-91B9-27253C3BB845}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +93,10 @@ Global
 		{7B286AB3-1F9E-4C45-AAE7-A99F8ABD0B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B286AB3-1F9E-4C45-AAE7-A99F8ABD0B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B286AB3-1F9E-4C45-AAE7-A99F8ABD0B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD35D67F-DAD8-4F04-91B9-27253C3BB845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD35D67F-DAD8-4F04-91B9-27253C3BB845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD35D67F-DAD8-4F04-91B9-27253C3BB845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD35D67F-DAD8-4F04-91B9-27253C3BB845}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

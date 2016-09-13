@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,29 +11,25 @@ namespace claseTres
         static void Main()
         {
             List<Auto> listaCar = new List<Auto>(); //Lista generic. [Ligada al tipo de dato].
-            ArrayList lista = new ArrayList(); //Lista no-generic. 
+            //ArrayList lista = new ArrayList(); //Lista no-generic. 
             //Stack juan = new Stack();
-            //Queue pepe = new Queue();
-            
+            //Queue pepe = new Queue();           
             //Hashtable coco = new Hashtable();
+            //Queue newQ = new Queue();
             
-            lista.Add(new Auto());
-            lista.Add(new Auto());
-
-            Queue newQ = new Queue();
-            newQ.
-            /*Carrera miCarrera;
+            Carrera miCarrera;
             miCarrera = new Carrera();
             for (int i = 0; i < 10; i++)
             {
-                miCarrera = miCarrera + new Auto();
+                miCarrera.listaAutos.Add(new Auto());
+                //miCarrera = miCarrera + new Auto();
             }
             miCarrera.CorrerCarreraTime(10);
             miCarrera.MostrarCarrera();
             Console.WriteLine("----------------CARRERA POR KILOMETROS--------------------");
             miCarrera.volverACero();
             miCarrera.CorrerCarrera(100);
-            miCarrera.MostrarCarrera();*/
+            miCarrera.MostrarCarrera();
 
             #region coments
             /*Rueda ggg = new Rueda("NIKE",40);

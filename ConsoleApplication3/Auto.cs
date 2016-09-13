@@ -8,6 +8,8 @@ namespace claseTres
 {
     public class Auto
     {
+        public string fabricante;
+        public string nombrePiloto;
         private Efabricante _fabricante;
         private Kilometros _kmRecorridos;
         private Tiempo _tiempoDemorado; 
@@ -18,7 +20,7 @@ namespace claseTres
         public static int ContadorDeobjetos;
         private static  Random _rnd;
         
-        
+                       
         static Auto() //incializacion de atributos.
         {
             Auto.ContadorDeobjetos = 0;
@@ -35,6 +37,12 @@ namespace claseTres
             this._kmRecorridos = 0;
             this._tiempoDemorado = 0;
             Auto.ContadorDeobjetos++;
+        }
+
+        public Auto(string nombre, Efabricante fabricante):this()
+        {
+            this.nombrePiloto = nombre;
+            this._fabricante = fabricante;
         }
         
         public static bool comprarAuto(Auto car1, Auto car2)

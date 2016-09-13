@@ -89,6 +89,7 @@ namespace trestres.ui
         {
             miRace.CorrerCarreraTime(int.Parse(this.textBoxToK.Text));
             this.textBox1.Text = miRace.MostrarCarreraTiempo();
+
         }
 
         private void btnXkilometro_Click(object sender, EventArgs e)

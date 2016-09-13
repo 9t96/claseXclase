@@ -15,7 +15,7 @@ namespace claseTres
             ArrayList lista = new ArrayList(); //Lista no-generic. 
             //Stack juan = new Stack();
             //Queue pepe = new Queue();
-            ArrayList
+            
             //Hashtable coco = new Hashtable();
             
             lista.Add(new Auto());

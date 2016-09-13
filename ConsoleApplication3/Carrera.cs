@@ -85,9 +85,9 @@ namespace claseTres
                     }
                     else
                     {
-                        if ((item.obtenerKilometros()) < min.obtenerKilometros())
+                        if ((item.obtenerKilometros) < min.obtenerKilometros)
                             min = item;
-                        if ((item.obtenerKilometros()) > max.obtenerKilometros())
+                        if ((item.obtenerKilometros) > max.obtenerKilometros)
                             max = item;
                     }
                     t++;
@@ -113,9 +113,9 @@ namespace claseTres
                     }
                     else
                     {
-                        if ((item.obtenerKilometros()) < min.obtenerKilometros())
+                        if ((item.obtenerKilometros) < min.obtenerKilometros)
                             min = item;
-                        if ((item.obtenerKilometros()) > max.obtenerKilometros())
+                        if ((item.obtenerKilometros) > max.obtenerKilometros)
                             max = item;
                     }
                     t++;
@@ -134,15 +134,18 @@ namespace claseTres
 
         }
 
-        public void MostrarCarrera()
+        public string MostrarCarreraTiempo()
         {
+            StringBuilder str = new StringBuilder();
 
             foreach (Auto car in this.listaAutos) //Recorre la lista y muestra auto por auto.
             {
-                Console.WriteLine(car.MostarAuto());
+                str.Append(car.datosEnString+"Km recorridos: " + car.obtenerKilometros);
+                //Console.WriteLine(car.datosEnString);
             }
 
-            Console.WriteLine("El ganador es: " + max.MostarAuto()+"\n"+"El ultimo fue: "+min.MostarAuto());
+            return str.ToString();
+            //Console.WriteLine("El ganador es: " + max.datosEnString+"\n"+"El ultimo fue: "+min.datosEnString);
             #region nonColection
             //Deprecated-nonColection-.
             /* this.auto1.MostarAuto();
@@ -152,6 +155,15 @@ namespace claseTres
             this.auto5.MostarAuto();
             this.auto6.MostarAuto();*/
             #endregion
+        }
+
+        public string MostrarGanador()
+        {
+            StringBuilder str = new StringBuilder();
+
+            str.Append("El ganador es: " + max.datosEnString + "\n" + "El ultimo fue: " + min.datosEnString);
+
+            return str.ToString();
         }
 
         //Agrega el auto pasado atraves del metodo Add de system.collection.

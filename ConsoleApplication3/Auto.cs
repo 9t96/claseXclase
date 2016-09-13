@@ -8,8 +8,7 @@ namespace claseTres
 {
     public class Auto
     {
-        public string fabricante;
-        public string nombrePiloto;
+        private string _nombrePiloto;
         private Efabricante _fabricante;
         private Kilometros _kmRecorridos;
         private Tiempo _tiempoDemorado; 
@@ -19,8 +18,38 @@ namespace claseTres
         public Rueda rdTD;
         public static int ContadorDeobjetos;
         private static  Random _rnd;
+
+        public Efabricante fabricante {
+
+            get {
+                return this._fabricante;
+            }
         
-                       
+        }
+
+        public string datosEnString
+        {
+            get           
+            {
+                return this.MostarAuto();
+            }
+        }
+
+        public int obtenerKilometros
+        {
+            get
+            {
+                return (int)this._kmRecorridos;
+            }
+        }
+        public int obtenerTiempo
+        {
+            get
+            {
+                return (int)this._tiempoDemorado;
+            }
+        }
+                     
         static Auto() //incializacion de atributos.
         {
             Auto.ContadorDeobjetos = 0;
@@ -41,7 +70,7 @@ namespace claseTres
 
         public Auto(string nombre, Efabricante fabricante):this()
         {
-            this.nombrePiloto = nombre;
+            this._nombrePiloto = nombre;
             this._fabricante = fabricante;
         }
         
@@ -53,11 +82,11 @@ namespace claseTres
             return false;
         }
 
-        public string MostarAuto()
+        private string MostarAuto()
         {
             StringBuilder str = new StringBuilder();
 
-            str.AppendLine("Fabricante: " + this._fabricante + "\t Kilometraje:" + (int)this._fabricante + "KM" + "\t Tiempo: ");
+            str.AppendLine("F: " + this._fabricante + "Name: " + this._nombrePiloto);
             //Console.WriteLine("Fabricante: {0}\t Kilometraje: {1}KM\t Tiempo: {2}",this._fabricante,(int)this._kmRecorridos,(int)this._tiempoDemorado);
             return str.ToString();
         }
@@ -89,8 +118,9 @@ namespace claseTres
             this.AgregarTiempo(tiempo);
             this.AgregarKilometros((int)km);
         }
-
-        public int obtenerKilometros()
+        
+        //DEPRECATED x Propiedad.
+        /*public int obtenerKilometros()
         {
             return (int)this._kmRecorridos;
         }
@@ -98,7 +128,7 @@ namespace claseTres
         public int obtenerTiempo()
         {
             return (int)this._tiempoDemorado;
-        }
+        }*/
 
     }
 }

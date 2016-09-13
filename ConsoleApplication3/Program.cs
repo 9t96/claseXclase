@@ -25,11 +25,11 @@ namespace claseTres
                 //miCarrera = miCarrera + new Auto();
             }
             miCarrera.CorrerCarreraTime(10);
-            miCarrera.MostrarCarrera();
+            miCarrera.MostrarCarreraTiempo();
             Console.WriteLine("----------------CARRERA POR KILOMETROS--------------------");
             miCarrera.volverACero();
             miCarrera.CorrerCarrera(100);
-            miCarrera.MostrarCarrera();
+            miCarrera.MostrarCarreraTiempo();
 
             #region coments
             /*Rueda ggg = new Rueda("NIKE",40);

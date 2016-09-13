@@ -18,13 +18,19 @@ namespace trestres.ui
         public Form1()
         {
             InitializeComponent();
+            foreach (claseTres.Efabricante item in Enum.GetValues(typeof(claseTres.Efabricante)))
+            {
+                this.comboBox1.Items.Add(item);
+            }
+            this.comboBox1.SelectedIndex = 1;
+            this.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             //this.miRace = new claseTres.Carrera();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             miRace = new claseTres.Carrera(textBoxNombreCarrera.Text.ToString(), textBoxLugarCarrera.Text.ToString(), textBoxFechaCarrera.Text.ToString());
-            gbCarrera.Enabled = false;
+            this.gbCarrera.Enabled = false;
         }
 
         private void textBoxGBCarrera_TextChanged(object sender, EventArgs e)
@@ -46,16 +52,13 @@ namespace trestres.ui
         {
             claseTres.Auto auto = new claseTres.Auto(this.textBoxNombrePiloto.Text.ToString(), (claseTres.Efabricante)this.comboBox1.SelectedItem);
             this.miRace.agregarAuto(auto);
+
+            MostrarListPiloto();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (claseTres.Efabricante item in Enum.GetValues(typeof(claseTres.Efabricante)))
-            {
-                this.comboBox1.Items.Add(item);
-            }
-            this.comboBox1.SelectedIndex = 1;
-            this.comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void Carrera_Enter(object sender, EventArgs e)
@@ -63,9 +66,13 @@ namespace trestres.ui
 
         }
 
-        public void MostrarPiloto()
+        public void MostrarListPiloto()
         {
-            
+            this.listBox1.Items.Clear();
+            foreach (claseTres.Auto item in miRace.listaAutos)
+            {
+                this.listBox1.Items.Add(item.datosEnString);
+            }
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -75,7 +82,23 @@ namespace trestres.ui
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnXtiempo_Click(object sender, EventArgs e)
+        {
+            miRace.CorrerCarreraTime(int.Parse(this.textBoxToK.Text));
+            this.textBox1.Text = miRace.MostrarCarreraTiempo();
+        }
+
+        private void btnXkilometro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxToK_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

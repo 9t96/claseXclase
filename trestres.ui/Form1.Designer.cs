@@ -37,17 +37,23 @@
             this.textBoxNombreCarrera = new System.Windows.Forms.TextBox();
             this.lblGBCarrera = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.gbListaAutos = new System.Windows.Forms.GroupBox();
-            this.gbResultado = new System.Windows.Forms.GroupBox();
-            this.textBoxNombrePiloto = new System.Windows.Forms.TextBox();
-            this.labelNombrePiloto = new System.Windows.Forms.Label();
-            this.labelFabricante = new System.Windows.Forms.Label();
-            this.btnAgregarAuto = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnAgregarAuto = new System.Windows.Forms.Button();
+            this.labelFabricante = new System.Windows.Forms.Label();
+            this.labelNombrePiloto = new System.Windows.Forms.Label();
+            this.textBoxNombrePiloto = new System.Windows.Forms.TextBox();
+            this.gbListaAutos = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.gbResultado = new System.Windows.Forms.GroupBox();
+            this.btnXtiempo = new System.Windows.Forms.Button();
+            this.btnXkilometro = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxToK = new System.Windows.Forms.TextBox();
+            this.lblTiempoOKm = new System.Windows.Forms.Label();
             this.gbCarrera.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbListaAutos.SuspendLayout();
+            this.gbResultado.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCorrerCarrera
@@ -142,50 +148,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Autos";
             // 
-            // gbListaAutos
+            // comboBox1
             // 
-            this.gbListaAutos.Controls.Add(this.listBox1);
-            this.gbListaAutos.Location = new System.Drawing.Point(304, 155);
-            this.gbListaAutos.Name = "gbListaAutos";
-            this.gbListaAutos.Size = new System.Drawing.Size(289, 233);
-            this.gbListaAutos.TabIndex = 3;
-            this.gbListaAutos.TabStop = false;
-            this.gbListaAutos.Text = "Lista de Autos";
-            this.gbListaAutos.Enter += new System.EventHandler(this.groupBox3_Enter);
-            // 
-            // gbResultado
-            // 
-            this.gbResultado.Location = new System.Drawing.Point(22, 394);
-            this.gbResultado.Name = "gbResultado";
-            this.gbResultado.Size = new System.Drawing.Size(571, 111);
-            this.gbResultado.TabIndex = 4;
-            this.gbResultado.TabStop = false;
-            this.gbResultado.Text = "Resultado";
-            // 
-            // textBoxNombrePiloto
-            // 
-            this.textBoxNombrePiloto.Location = new System.Drawing.Point(13, 76);
-            this.textBoxNombrePiloto.Name = "textBoxNombrePiloto";
-            this.textBoxNombrePiloto.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNombrePiloto.TabIndex = 0;
-            // 
-            // labelNombrePiloto
-            // 
-            this.labelNombrePiloto.AutoSize = true;
-            this.labelNombrePiloto.Location = new System.Drawing.Point(13, 47);
-            this.labelNombrePiloto.Name = "labelNombrePiloto";
-            this.labelNombrePiloto.Size = new System.Drawing.Size(44, 13);
-            this.labelNombrePiloto.TabIndex = 2;
-            this.labelNombrePiloto.Text = "Nombre";
-            // 
-            // labelFabricante
-            // 
-            this.labelFabricante.AutoSize = true;
-            this.labelFabricante.Location = new System.Drawing.Point(146, 47);
-            this.labelFabricante.Name = "labelFabricante";
-            this.labelFabricante.Size = new System.Drawing.Size(57, 13);
-            this.labelFabricante.TabIndex = 3;
-            this.labelFabricante.Text = "Fabricante";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(149, 76);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btnAgregarAuto
             // 
@@ -197,29 +167,115 @@
             this.btnAgregarAuto.UseVisualStyleBackColor = true;
             this.btnAgregarAuto.Click += new System.EventHandler(this.btnAgregarAuto_Click);
             // 
-            // comboBox1
+            // labelFabricante
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(149, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.labelFabricante.AutoSize = true;
+            this.labelFabricante.Location = new System.Drawing.Point(146, 47);
+            this.labelFabricante.Name = "labelFabricante";
+            this.labelFabricante.Size = new System.Drawing.Size(57, 13);
+            this.labelFabricante.TabIndex = 3;
+            this.labelFabricante.Text = "Fabricante";
+            // 
+            // labelNombrePiloto
+            // 
+            this.labelNombrePiloto.AutoSize = true;
+            this.labelNombrePiloto.Location = new System.Drawing.Point(13, 47);
+            this.labelNombrePiloto.Name = "labelNombrePiloto";
+            this.labelNombrePiloto.Size = new System.Drawing.Size(44, 13);
+            this.labelNombrePiloto.TabIndex = 2;
+            this.labelNombrePiloto.Text = "Nombre";
+            // 
+            // textBoxNombrePiloto
+            // 
+            this.textBoxNombrePiloto.Location = new System.Drawing.Point(13, 76);
+            this.textBoxNombrePiloto.Name = "textBoxNombrePiloto";
+            this.textBoxNombrePiloto.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNombrePiloto.TabIndex = 0;
+            // 
+            // gbListaAutos
+            // 
+            this.gbListaAutos.Controls.Add(this.listBox1);
+            this.gbListaAutos.Location = new System.Drawing.Point(304, 155);
+            this.gbListaAutos.Name = "gbListaAutos";
+            this.gbListaAutos.Size = new System.Drawing.Size(289, 271);
+            this.gbListaAutos.TabIndex = 3;
+            this.gbListaAutos.TabStop = false;
+            this.gbListaAutos.Text = "Lista de Autos";
+            this.gbListaAutos.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(21, 29);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(251, 186);
+            this.listBox1.Size = new System.Drawing.Size(251, 225);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // gbResultado
+            // 
+            this.gbResultado.Controls.Add(this.lblTiempoOKm);
+            this.gbResultado.Controls.Add(this.textBoxToK);
+            this.gbResultado.Controls.Add(this.textBox1);
+            this.gbResultado.Controls.Add(this.btnXkilometro);
+            this.gbResultado.Controls.Add(this.btnXtiempo);
+            this.gbResultado.Location = new System.Drawing.Point(22, 432);
+            this.gbResultado.Name = "gbResultado";
+            this.gbResultado.Size = new System.Drawing.Size(571, 156);
+            this.gbResultado.TabIndex = 4;
+            this.gbResultado.TabStop = false;
+            this.gbResultado.Text = "Resultado";
+            // 
+            // btnXtiempo
+            // 
+            this.btnXtiempo.Location = new System.Drawing.Point(20, 113);
+            this.btnXtiempo.Name = "btnXtiempo";
+            this.btnXtiempo.Size = new System.Drawing.Size(113, 25);
+            this.btnXtiempo.TabIndex = 0;
+            this.btnXtiempo.Text = "Correr por Tiempo";
+            this.btnXtiempo.UseVisualStyleBackColor = true;
+            this.btnXtiempo.Click += new System.EventHandler(this.btnXtiempo_Click);
+            // 
+            // btnXkilometro
+            // 
+            this.btnXkilometro.Location = new System.Drawing.Point(157, 113);
+            this.btnXkilometro.Name = "btnXkilometro";
+            this.btnXkilometro.Size = new System.Drawing.Size(113, 25);
+            this.btnXkilometro.TabIndex = 1;
+            this.btnXkilometro.Text = "Correr por Kilometros";
+            this.btnXkilometro.UseVisualStyleBackColor = true;
+            this.btnXkilometro.Click += new System.EventHandler(this.btnXkilometro_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(327, 19);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(227, 122);
+            this.textBox1.TabIndex = 2;
+            // 
+            // textBoxToK
+            // 
+            this.textBoxToK.Location = new System.Drawing.Point(16, 60);
+            this.textBoxToK.Name = "textBoxToK";
+            this.textBoxToK.Size = new System.Drawing.Size(254, 20);
+            this.textBoxToK.TabIndex = 3;
+            this.textBoxToK.TextChanged += new System.EventHandler(this.textBoxToK_TextChanged);
+            // 
+            // lblTiempoOKm
+            // 
+            this.lblTiempoOKm.AutoSize = true;
+            this.lblTiempoOKm.Location = new System.Drawing.Point(22, 22);
+            this.lblTiempoOKm.Name = "lblTiempoOKm";
+            this.lblTiempoOKm.Size = new System.Drawing.Size(143, 13);
+            this.lblTiempoOKm.TabIndex = 4;
+            this.lblTiempoOKm.Text = "Ingrese Tiempo o Kilometros:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 517);
+            this.ClientSize = new System.Drawing.Size(605, 600);
             this.Controls.Add(this.gbResultado);
             this.Controls.Add(this.gbListaAutos);
             this.Controls.Add(this.groupBox2);
@@ -231,6 +287,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.gbListaAutos.ResumeLayout(false);
+            this.gbResultado.ResumeLayout(false);
+            this.gbResultado.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -254,6 +312,11 @@
         private System.Windows.Forms.TextBox textBoxNombrePiloto;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnXtiempo;
+        private System.Windows.Forms.Button btnXkilometro;
+        private System.Windows.Forms.Label lblTiempoOKm;
+        private System.Windows.Forms.TextBox textBoxToK;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

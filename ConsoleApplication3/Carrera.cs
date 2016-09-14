@@ -55,7 +55,7 @@ namespace claseTres
             max = null;
             min = null;
         }
-
+        #region carrera
         public void CorrerCarreraTime(Tiempo time)
         {
             for (int i = 0; i < (int) time; i++)
@@ -133,14 +133,15 @@ namespace claseTres
 
 
         }
-
+        #endregion
+        
         public string MostrarCarreraTiempo()
         {
             StringBuilder str = new StringBuilder();
 
             foreach (Auto car in this.listaAutos) //Recorre la lista y muestra auto por auto.
             {
-                str.Append(car.datosEnString+"Km recorridos: " + car.obtenerKilometros);
+                str.AppendLine("Name: "+car.obtenerNombre+"Km recorridos: " + car.obtenerKilometros);
                 //Console.WriteLine(car.datosEnString);
             }
 
@@ -157,11 +158,25 @@ namespace claseTres
             #endregion
         }
 
+        public string MostrarCarreraKilometros()
+        {
+            StringBuilder str = new StringBuilder();
+            foreach (Auto car in this.listaAutos)
+            {
+                str.AppendLine("Name: " + car.obtenerNombre + "Tiempo demorado: " + car.obtenerTiempo);
+            }
+            str.AppendLine("");
+            str.AppendLine("");
+            str.AppendLine(this.MostrarGanador());
+            return str.ToString();
+        }
+
         public string MostrarGanador()
         {
             StringBuilder str = new StringBuilder();
 
-            str.Append("El ganador es: " + max.datosEnString + "\n" + "El ultimo fue: " + min.datosEnString);
+            str.Append("El ganador es: " + max.datosEnString);
+            str.AppendLine("  El ultimo fue: " + min.datosEnString);
 
             return str.ToString();
         }

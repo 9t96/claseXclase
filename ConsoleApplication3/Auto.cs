@@ -27,6 +27,14 @@ namespace claseTres
         
         }
 
+        public string obtenerNombre
+        {
+            get
+            {
+                return this._nombrePiloto;
+            }
+        }
+
         public string datosEnString
         {
             get           
@@ -73,7 +81,29 @@ namespace claseTres
             this._nombrePiloto = nombre;
             this._fabricante = fabricante;
         }
-        
+
+        #region Orderers
+        //OrdenaDescendente
+        public static int ordenarXMarcaDesc(Auto auto1, Auto auto2)
+        {
+            return string.Compare(auto2.fabricante.ToString(),auto1.fabricante.ToString());            
+        }
+        //Ordena asce
+        public static int ordenarXMarcAsc(Auto auto1, Auto auto2)
+        {
+            return string.Compare(auto1.fabricante.ToString(), auto2.fabricante.ToString());
+        }
+        //Ordenar Asc
+        public static int ordenarXPilotoAsc(Auto auto1, Auto auto2)
+        {
+            return string.Compare(auto1.obtenerNombre.ToString(), auto2.obtenerNombre.ToString());
+        }
+        //Desc
+        public static int ordenarXPilotoDesc(Auto auto1,Auto auto2)
+        {
+            return string.Compare(auto2.obtenerNombre.ToString(),auto1.obtenerNombre.ToString());
+        }
+        #endregion
         public static bool comprarAuto(Auto car1, Auto car2)
         {
             if (car1._fabricante == car2._fabricante)

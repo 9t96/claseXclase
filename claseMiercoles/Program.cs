@@ -10,8 +10,8 @@ namespace claseMiercoles
     {
         static void Main()
         {
-            Factura miFactura = new Factura(99);
             Remito miRemito = new Remito(666);
+            Factura miFactura = new Factura(99);          
             FacturaA miFacturaA = new FacturaA(20,miFactura);
             FacturaAPagada miFacturaAPagada = new FacturaAPagada("20/20/20",miFacturaA);
             
@@ -21,6 +21,7 @@ namespace claseMiercoles
             miDocumento.Add(miRemito);
             miDocumento.Add(miFacturaA);
             miDocumento.Add(miFacturaAPagada);
+            
             foreach (Documento item in miDocumento)
             {
                 item.Mostrar();

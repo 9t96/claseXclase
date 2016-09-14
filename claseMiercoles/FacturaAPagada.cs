@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace claseMiercoles
 {
-    class FacturaAPagada:FacturaA
+    public class FacturaAPagada:FacturaA
     {
-        
+        public string fechaDePago;
+
+        public FacturaAPagada(string fechadepago, FacturaA unaFactura)
+            :base(21,unaFactura)
+        {
+            this.fechaDePago = fechadepago;
+        }
+
     }
 }

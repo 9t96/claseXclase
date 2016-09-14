@@ -9,8 +9,8 @@ namespace claseMiercoles
     public class Documento
     {
         public int numero;
-        protected string fecha;
-        private int numeroDeControl;
+        public string fecha;
+        public int numeroDeControl;
         
         public Documento(int number)
         {

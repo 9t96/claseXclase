@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace claseMiercoles
 {
-    class Program
+    public class Remito:Documento
     {
-        static void Main()
-        {
-            Factura miFactura = new Factura();
-        }
+        
     }
 }

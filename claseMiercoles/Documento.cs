@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace claseMiercoles
 {
-    class Program
+    public class Documento
     {
-        static void Main()
-        {
-            Factura miFactura = new Factura();
+        public int numero;
+
+        public void Mostrar()
+        { 
+            
         }
     }
 }

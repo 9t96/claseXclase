@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ejercicioCampu Clase7", "ej
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trestres.ui", "trestres.ui\trestres.ui.csproj", "{CD35D67F-DAD8-4F04-91B9-27253C3BB845}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "claseMiercolesHerencia", "claseMiercoles\claseMiercolesHerencia.csproj", "{92987928-2EA7-4084-B0F9-21C1574B598B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,10 @@ Global
 		{CD35D67F-DAD8-4F04-91B9-27253C3BB845}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD35D67F-DAD8-4F04-91B9-27253C3BB845}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD35D67F-DAD8-4F04-91B9-27253C3BB845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92987928-2EA7-4084-B0F9-21C1574B598B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92987928-2EA7-4084-B0F9-21C1574B598B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92987928-2EA7-4084-B0F9-21C1574B598B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92987928-2EA7-4084-B0F9-21C1574B598B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

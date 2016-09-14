@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d467db8c-6183-494d-81f0-817f70482e97</ProjectGuid>
+    <ProjectGuid>{92987928-2EA7-4084-B0F9-21C1574B598B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>claseMiercoles</RootNamespace>
@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Documento.cs" />
+    <Compile Include="Factura.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remito.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -8,7 +8,9 @@ namespace Abtract
 {
     public class Avion:Vehiculo,IAfip
     {
-        public Avion(string patente) : base(patente) { }
+        public Avion(string patente) 
+            : base(patente) 
+        { }
 
         public override float CalcularCosto()
         {
@@ -20,5 +22,6 @@ namespace Abtract
         {
             return 3;
         }
+       
     }
 }

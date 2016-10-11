@@ -14,6 +14,7 @@ namespace Abtract
             Deportivo deportivo = new Deportivo("aaa999");
             Avion avion = new Avion("888ccc");
             Carreta carreta= new Carreta("hhh888");
+            Privada privada = new Privada("avion");
 
             List<Vehiculo> lista = new List<Vehiculo>();
             List<IAfip> listia = new List<IAfip>();
@@ -25,6 +26,7 @@ namespace Abtract
 
             listia.Add(avion);
             listia.Add(deportivo);
+            listia.Add(privada);
 
             foreach (Vehiculo item in lista)
             {
@@ -37,6 +39,7 @@ namespace Abtract
             {
                 Console.WriteLine(item.RetornarImpuesto());
             }
+
 
             Console.ReadKey();
         }
